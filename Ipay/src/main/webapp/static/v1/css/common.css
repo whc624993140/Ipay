@@ -1,0 +1,35 @@
+@charset "utf-8";
+/**
+  * File   	    : common.css
+  * Description : 这个样式表包含的所有页面的初始化样式和绝大多数页面公用的样式
+  * Date   		: 2014-6-6 
+  * Author 		: name
+  * E-mail 		: 
+  * Update  	: name 
+  */
+  
+ /*----------initialize start--------------*/
+div, p, dl, dd, a, b, u, em, input, textarea, button, select, form, section, label, span, td, li, body, ul, i, h1, h2, h3, h4, h5, h6 { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; word-wrap: break-word; word-break: break-all; padding: 0; margin: 0;}
+article, aside, dialog, footer, header, hgroup, menu, section, figure,nav,legend { display: block; padding: 0; margin: 0; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{ margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } 
+body { line-height: 1; } 
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } 
+ins { text-decoration: none; } 
+del { text-decoration: line-through; } 
+table { border-collapse: collapse; border-spacing: 0; }
+mark { background: none; }
+a{ text-decoration: none;}
+input,img { border: none; }
+img{vertical-align: middle;}
+a{ cursor: pointer;}
+a:focus, a:active { outline: none; }
+body, td, input, textarea, option, select, button { font-family:"Microsoft YaHei";}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:none}
+body{font-family:"Microsoft YaHei";}
+*{
+	margin: 0;padding: 0;
+}
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */

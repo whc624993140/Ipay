@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>com.aicyber</groupId>
+		<artifactId>c4</artifactId>
+		<version>1.0-beta5</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>wx.module.static</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-beta1</version>
+	<dependencies>
+		<dependency>
+			<groupId>com.aicyber</groupId>
+			<artifactId>file.static</artifactId>
+			<version>1.0-beta2</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<dependentWarExcludes>*/web.xml,WEB-INF/lib/*,/META-INF/*</dependentWarExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+font-size:14px;
+color:#666;
+line-height:30px;	
+}
+select{
+height:30px;
+line-height:30px;	
+}
+.clear{
+clear:both;	
+}
+.payattention{
+min-width: 310px;
+ height: 400px; 
+ margin: 0 auto;		
+}
+.dash_tab{
+	float:left;
+/* width:240px; */
+height:30px;
+}
+.dash_tab ul{
+list-style:none;	
+}
+.dash_tab li{
+	float:left;
+	width:118px;
+font-size:12px;
+line-height:30px;
+text-align:center;
+color:#666;
+border:1px solid #ccc;	
+}
+.dash_tab li:hover{
+	color:#fff;
+background:#6C9;	
+}
+.dash_date{
+float:left;
+margin-left:140px;
+margin-right:10px;	
+}
+.dash_date ul{
+list-style:none;	
+}
+.dash_date li{
+	float:left;
+font-size:12px;
+line-height:30px;
+padding:0px 8px;
+text-align:center;
+color:#666;
+border:1px solid #ccc;	
+}
+.dash_date li:hover{
+	color:#fff;
+background:#6C9;	
+}
+.piechat{
+min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto;	
+}

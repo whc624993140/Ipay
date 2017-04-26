@@ -1,0 +1,275 @@
+html,body{
+	color: #656565;
+	font-size: 12px;
+}
+.head{
+	background: #fff;
+}
+.navbar{
+	background: #2f2f2f;
+}
+.navbar ul li{
+	color: #8e9eae;
+	border-left: 2px solid #2f2f2f;
+}
+.navbar ul li ul{
+	background: #fff;
+}
+.navbar ul li ul li{
+	color: #656565;
+}
+.navbar ul li ul li:hover{
+	background: #90b947;
+	color:#fff;
+}
+.badge{
+	background: #B1B5B9;
+	color: #fff;
+}
+.mainBody{
+	background: #f1f2f7;
+}
+.nowdate{
+	background: #90b947;
+}
+.nowtime{
+	color: #90b947;
+}
+.dataNum:hover{
+	background: rgba(035,052,069,.1);
+}
+.dataimg1{
+	background: #fa8564;
+}
+.dataimg1:hover{
+	background: #fa9a7f;
+}
+.dataimg2{
+	background: #aec785;
+}
+.dataimg2:hover{
+	background: #c4de9a;
+}
+.dataimg3{
+	background: #c785b5;
+}
+.dataimg3:hover{
+	background: #dd9fcc;
+}
+.dataimg4{
+	background: #5faee3;
+}
+.dataimg4:hover{
+	background: #7bc2f1;
+}
+.dataimg5{
+	background: #1fbba6;
+}
+.dataimg5:hover{
+	background: #99c152;
+}
+.dataimg6{
+	background: #fdc005;
+}
+.dataimg6:hover{
+	background: #ffd450;
+}
+.loginInfo ul li:hover{
+	background: #90b947;
+}
+.mma-title,.action-title{
+	background: #2f2f2f;
+}
+.ul-mm > li,.ul-mm > li > ul > li{
+	color: #666;
+}
+.ul-mm > li i{
+	color: #90b947 !important;
+}
+.ul-mm > li > ul > li i,.ul-son-edit i{
+	color: #99c152 !important;
+}
+.mm-icon,.ul-mm > li .li-edit{
+	/*background: #2f2f2f;*/
+	background: none;
+}
+.action-title{
+	background: #90b947;
+}
+.imgWinClose{
+	background: #90b947;
+}
+.menuPopTitle{
+	background: #90b947;
+}
+.btn_save{
+	background: #90b947;
+}
+.btn_save:hover{
+	background: #99c152;
+}
+.action-t{
+	background: #90b947;
+}
+.action-t:hover{
+	background: #99c152;
+}
+.action-i{
+	background: #5292d2;
+}
+.action-i:hover{
+	background: #7bc2f1;
+}
+.action-l{
+	background: #f4c414;
+}
+.action-l:hover{
+	background: #ffd450;
+}
+.action-c{
+	background: #ff5f5f;
+}
+.action-c:hover{
+	background: #ff7070;
+}
+@media screen and (max-width: 1200px){
+.action_sava{
+		background: #90b947;
+	}
+	.action_sava:hover{
+		background: #99c152;
+	}
+	.action_release{
+		background: #dd741f;
+	}
+	.action_release:hover{
+		background: #7bc2f1;
+	}
+	.action_preview:hover{
+		background: #2f2f2f;
+	}
+}
+@media screen and (min-width: 1200px){
+	.action_sava{
+		background: #90b947;
+	}
+	.action_sava:hover{
+		background: #99c152;
+	}
+	.action_release{
+		background: #dd741f;
+	}
+	.action_release:hover{
+		background: #7bc2f1;
+	}
+	.action_preview:hover{
+		background: #2f2f2f;
+
+	}
+}
+.actDispYes{
+	background: #90b947;
+}
+.actDispYes:hover{
+	background: #99c152;
+}
+.actDispNo:hover{
+	background: #2f2f2f;
+}
+.customerGroup_cnt ul li{
+	background: #90b947;
+}
+.customerGroup_cnt ul li:hover{
+	background: #99c152;
+}
+.gr{
+	background: #90b947;
+}
+.gr:hover{
+	background: #99c152;
+}
+
+.se{
+	background: #dd741f;
+
+}
+.se:hover{
+	background: #e8822f;
+}
+.RleBt{
+	background: #90b947;
+}
+.RleBt:hover{
+	background: #99c152;
+}
+.prevBt:hover{
+	background: #2f2f2f;
+	border:1px solid #2f2f2f;
+}
+.alertArea_tip{
+	background: #90b947;
+}
+.sure{
+	background: #90b947;
+}
+.sure:hover{
+	background: #99c152;
+}
+.cancel:hover{
+	background: #2f2f2f;
+	border: 1px solid #2f2f2f;
+}
+.gr{
+	box-shadow: 0px 3px 0px #99c152;
+	-webkit-box-shadow:  0px 3px 0px #99c152;
+	-moz-box-shadow:  0px 3px 0px #99c152;
+	-o-box-shadow: 0px 3px 0px #99c152;
+	-ms-box-shadow:  0px 3px 0px #99c152;
+}
+
+.se{
+	box-shadow: 0px 3px 0px #f1bb35;
+	-webkit-box-shadow:  0px 3px 0px #f1bb35;
+	-moz-box-shadow:  0px 3px 0px #f1bb35;
+	-o-box-shadow: 0px 3px 0px #f1bb35;
+	-ms-box-shadow:  0px 3px 0px #f1bb35;
+
+}
+.perSet:hover,.sysSet:hover{
+	color: #90b947;
+}
+.actDtic{
+	color: #90b947;
+}
+.userInfoAdd{
+	background:#2f2f2f;
+	color: #fff;
+}
+.navbarHover1{
+	color: #fff;
+}
+.navbarHover2{
+	color: #8E9EAE;
+}
+.navbarLiAdd{
+	border-left:2px solid #90b947 !important;
+	color:#fff !important;
+}
+.navbarLiOtherAdd{
+	border-left:2px solid #2f2f2f !important;
+	color:#8E9EAE !important;
+}
+.messgeRelease_t_liAdd{
+	color: #90b947 !important;
+}
+.messgeRelease_t ul li span{
+	background: #90b947;
+	color: #fff;
+	border:1px solid #90b947;
+}
+.messgeRelease_t ul li span:before{
+	border-top: 7px solid #90b947;
+}
+.messgeRelease_t ul li span:after{
+	border-top: 7px solid #90b947;
+}

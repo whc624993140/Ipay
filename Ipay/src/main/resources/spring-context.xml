@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/task  
+	   http://www.springframework.org/schema/task/spring-task-4.0.xsd  
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+       http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd"
+	default-lazy-init="false">
+	<!-- 加载配置属性文件 -->
+	<context:property-placeholder
+		ignore-unresolvable="true" location="classpath*:/app.properties" />
+
+	<!-- 使用Annotation自动注册Bean，解决事物失效问题：在主容器中不扫描@Controller注解，在SpringMvc中只扫描@Controller注解。 -->
+	<context:component-scan base-package="com.aicyber"><!-- base-package 
+			如果多个，用“,”分隔 -->
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!-- 打开aop 注解 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<!-- 定义事务 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean class="com.aicyber.tools.GlobalProvider" init-method="init">
+		<property name="filePath" value="classpath:/app.properties"></property>
+		<property name="key" value="app"></property>
+		<property name="isDefault" value="true"></property>
+	</bean>
+
+	<!-- 配置 Annotation 驱动，扫描@Transactional注解的类定义事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" order="3" />
+
+	<bean id="httpClientHelper" class="com.aicyber.tools.HttpClientHelper"></bean>
+
+	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="5" />
+		<property name="maxPoolSize" value="500" />
+		<property name="queueCapacity" value="1000" />
+		<property name="keepAliveSeconds" value="30000" />
+	</bean>
+
+	<task:annotation-driven executor="taskExecutor" />
+
+
+	<!-- 配置 JSR303 Bean Validator 定义 -->
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<!-- 缓存配置 -->
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:${ehcache.configFile}" />
+		<property name="shared" value="true" />
+	</bean>
+	
+
+	<bean id="cachecacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager" ref="cacheManager" />
+<!-- 		<property name="transactionAware" value="true" /> -->
+	</bean>
+	
+	<cache:annotation-driven cache-manager="cachecacheManager"	proxy-target-class="true" />
+
+	<!--配置邮件模板 -->
+	<bean id="freeMarkerConfigurer"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="classpath:/email" />
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="template_update_delay">1500</prop>
+				<prop key="default_encoding">UTF-8</prop>
+				<prop key="locale">zh_CN</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="sendCloudV2Sender" class="com.aicyber.c4.mail.sender.SendCloudV2Sender">
+		<property name="api_user" value="${mail.api_user}"></property>
+		<property name="api_key" value="${mail.api_key}"></property>
+		<property name="defaultFrom" value="${mail.from}"></property>
+		<property name="defaultFromName" value="${mail.from_name}"></property>
+		<property name="defaultReplyTo" value="${mail.replyto}"></property>
+	</bean>
+
+</beans>

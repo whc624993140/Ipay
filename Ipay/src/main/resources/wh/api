@@ -1,0 +1,442 @@
+jiaojian, 注意下
+
+orgService 
+personService 
+
+里面的TODO. 是关于标签处理的, 我们这边没法改 labelService , 需要在 labelService 里添加个 findByLabelName 的方法, 所以 暂时就是把 label 的key给输出了.
+这个需要你完善下.
+
+
+1.添加媒体信息:/wx/org/add.json
+参数:
+	private String orgName;
+	private String orgType;
+	private String industry;
+	private String level;
+	private String phone;
+	private String province;
+	private String city;
+	private String address;
+	private String comment;
+
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": {
+    "pageSize": 20,
+    "totalCount": 1,
+    "currentPage": 1,
+    "indexes": [
+      0
+    ],
+    "items": [
+      {
+        "id": 1,
+        "orgName": "搜狐视频",
+        "orgType": "电视",
+        "industry": "电视",
+        "level": "一级",
+        "phone": "18986039872",
+        "province": "湖北",
+        "city": "武汉",
+        "address": "湖北信息产业科技大厦",
+        "comment": "可能搬家"
+      }
+    ],
+    "heads": null,
+    "conditions": {
+      "city": "武汉"
+    },
+    "pageCount": 1,
+    "lastIndex": 0
+  }
+}
+
+2.获取媒体的详情：/wx/org/{orgId}
+参数：Long orgId
+返回值:
+{
+success: true,
+errmsg: null,
+data: {
+id: 1,
+orgName: "搜狐视频",
+orgType: "电视",
+industry: "电视",
+level: "一级",
+phone: "18986039872",
+province: "湖北",
+city: "武汉",
+address: "湖北信息产业科技大厦",
+comment: "可能搬家"
+}
+}
+
+3.获取媒体的列表信息：/wx/org/list.json
+参数:
+private String orgType;
+	private String industry;
+	private String level;
+	private String province;
+	private String city;
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": {
+    "pageSize": 20,
+    "totalCount": 1,
+    "currentPage": 1,
+    "indexes": [
+      0
+    ],
+    "items": [
+      {
+        "id": 1,
+        "orgName": "搜狐视频",
+        "orgType": "电视",
+        "industry": "电视",
+        "level": "一级",
+        "phone": "18986039872",
+        "province": "湖北",
+        "city": "武汉",
+        "address": "湖北信息产业科技大厦",
+        "comment": "可能搬家"
+      }
+    ],
+    "heads": null,
+    "conditions": {
+      "city": "武汉"
+    },
+    "pageCount": 1,
+    "lastIndex": 0
+  }
+}
+
+4.更新媒体信息:/wx/org/update.json
+参数:
+	private Long id;
+	private String orgName;
+	private String orgType;
+	private String industry;
+	private String level;
+	private String phone;
+	private String province;
+	private String city;
+	private String address;
+	private String comment;
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": {
+    "id": 1,
+    "orgName": "搜狐视频1",
+    "orgType": "新媒体",
+    "industry": "综合",
+    "level": "二级",
+    "phone": "18986039872",
+    "province": "北京",
+    "city": "北京",
+    "address": "搜狐大厦",
+    "comment": ""
+  }
+}
+
+5.更新备注信息:/wx/org/updateComment.json
+参数:
+	private Long id;
+	private String comment;
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": 1
+}
+
+6.删除媒体信息:/wx/org/delete/{orgId}
+参数:Long orgId
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": 1
+}
+
+7.批量删除媒体信息:/wx/org/deleteByIds.json?ids=
+参数:String ids 媒体id用,分割
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": 10 --删除记录数
+}
+
+7.所有的媒体信息:/wx/org/findAll.json
+{
+  "success": true,
+  "errmsg": null,
+  "data": [
+      {
+        "id": 1,
+        "orgName": "搜狐视频",
+        "orgType": "电视",
+        "industry": "电视",
+        "level": "一级",
+        "phone": "18986039872",
+        "province": "湖北",
+        "city": "武汉",
+        "address": "湖北信息产业科技大厦",
+        "comment": "可能搬家"
+      }
+    ]
+}
+
+导入 /wx/org/import.json
+    示例文件 meitixinxi.xls
+
+导出 /wx/org/exportAll.json
+
+
+1.添加媒体人: /wx/person/add.json
+参数:
+// 姓名
+	private String fullName;
+	// 姓名拼音
+	private String englishName;
+	private String gender;
+	private String phone;
+	private String email;
+	// 媒体信息
+	private Long org.id;
+
+	private String birthdayStr 生日 yyyy-MM-dd ;
+	private String province;
+	private String city;
+	private String address;
+	// 职位信息
+	private String jobInfo;
+	// 职位层级
+	private String jobLevel;
+	// 联系级别
+	private String linkLevel;
+
+	// 身份证
+	private String idCard;
+	// 护照
+	private String passport;
+	// 备注
+	private String remark;
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": null
+}
+
+2.查询列表:/wx/person/list.json
+参数:
+	private String orgName;
+	private String orgType;
+	private String industry;
+	private String level;
+	private String province;
+	private String city;
+	// 职位信息
+	private String jobInfo;
+	// 职位层级
+	private String jobLevel;
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": {
+    "pageSize": 20,
+    "totalCount": 1,
+    "currentPage": 1,
+    "indexes": [
+      0
+    ],
+    "items": [
+      {
+        "fullName": "张万飞",
+        "englishName": "wanfeizhang",
+        "gender": "男",
+        "phone": "18986039872",
+        "email": "f@sendcloud.im",
+        "org": {
+          "id": 1,
+          "orgName": "腾讯视频",
+          "orgType": "新媒体",
+          "industry": "综合",
+          "level": "二级",
+          "phone": "18986039872",
+          "province": "北京",
+          "city": "北京",
+          "address": "搜狐大厦",
+          "comment": ""
+        },
+        "birthday": 1011888000000,
+        "province": "湖北",
+        "city": "武汉",
+        "address": "湖北光谷国际广场",
+        "jobInfo": "架构师",
+        "jobLevel": "中层",
+        "linkLevel": "第二",
+        "idCard": "2012141221212212",
+        "passport": "werwerwer",
+        "remark": "测试",
+        "auditStatus": "待审核",
+        "openId": null,
+        "createTime": 1442565949000,
+        "updateTime": 1442565966000,
+        "oid": "a0dc037786c047839c75405260ac6505"
+      }
+    ],
+    "heads": null,
+    "conditions": {},
+    "pageCount": 1,
+    "lastIndex": 0
+  }
+}
+3.更新操作:/wx/person/update.json
+参数:
+String OID ;主键ID
+// 姓名
+	private String fullName;
+	// 姓名拼音
+	private String englishName;
+	private String gender;
+	private String phone;
+	private String email;
+	// 媒体信息
+	private Long org.id;
+
+	private String birthdayStr 生日 yyyy-MM-dd ;
+	private String province;
+	private String city;
+	private String address;
+	// 职位信息
+	private String jobInfo;
+	// 职位层级
+	private String jobLevel;
+	// 联系级别
+	private String linkLevel;
+
+	// 身份证
+	private String idCard;
+	// 护照
+	private String passport;
+	// 备注
+	private String remark;
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": {
+    "fullName": "张万飞1",
+    "englishName": "wanfeizhang",
+    "gender": "男",
+    "phone": "18986039872",
+    "email": "f@sendcloud.im",
+    "org": {
+      "id": 1,
+      "orgName": null,
+      "orgType": null,
+      "industry": null,
+      "level": null,
+      "phone": null,
+      "province": null,
+      "city": null,
+      "address": null,
+      "comment": null
+    },
+    "birthday": 1011888000000,
+    "province": "湖北",
+    "city": "武汉",
+    "address": "湖北光谷国际广场",
+    "jobInfo": "架构师",
+    "jobLevel": "中层",
+    "linkLevel": "第二",
+    "idCard": "2012141221212212",
+    "passport": "werwerwer",
+    "remark": "测试",
+    "auditStatus": null,
+    "openId": null,
+    "createTime": null,
+    "updateTime": null,
+    "oid": "a0dc037786c047839c75405260ac6505"
+  }
+}
+
+4.删除操作:/wx/person/delete/a0dc037786c047839c75405260ac6505
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": 1
+}
+
+5.审核操作:/wx/person/audit.json
+参数:
+String personId, 
+String auditStatus
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": 1
+}
+
+6.批量删除操作:/wx/person/deleteByIds.json
+参数:String ids OID列表,用,分割
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": 1
+}
+
+
+
+7.生成二维码:/wx/person/getqrcode/d2667414e9cc4e8ca4588e8780099e1f
+参数:@PathVariable String personId
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=TICKET"
+}
+
+8发送认证邮件:/wx/person/sendQrcodeEmail.json
+参数:String ids   personId列表,用,分割
+返回值:
+{
+  "success": true,
+  "errmsg": null,
+  "data": null
+}
+
+
+导入 /wx/person/import.json
+    示例文件 meitiren.xls
+
+导出 /wx/person/exportAll.json
+
+
+邮件发送
+wx/mail/send.json
+参数:subject, html, tos (多个地址用;分割开)
+
+留言
+wx/feedback/post.json
+
+wx/feedback/list.json
+
+wx/feedback/delet/{id}
+
+
+
+
+

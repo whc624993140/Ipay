@@ -1,0 +1,482 @@
+@import url(common.css);
+
+.font12{
+font-size:12px;	
+  margin-top: 10px;
+  margin-right: 20px;
+}
+select{
+	height:32px;
+line-height:32px;	
+}
+/*菜单点击*/
+.rule{
+	margin-bottom: -10px;
+	padding-bottom: 0px;
+}
+
+/*
+.box_grey{
+	float: left;
+	width:10px;
+	height:20px;
+	background:#999;
+	margin-top:5px;
+	margin-left:10px;
+}
+.rule_title ul li:hover .box_grey{background:#FFF;}
+*/
+
+.rule_title_01{
+	height: 40px;
+}
+.rule_title ul,.rule_title_01 ul{
+	float:left;
+}
+.rule_title ul li,.rule_title_01 ul li{
+	float: left;
+	width:180px;
+	height: 30px;
+	color:#333333;
+	line-height: 30px;
+	margin-left: 10px;
+	font-size: 14px;
+	text-align: center;
+	border-radius:3px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+.rule_title_01 ul li{
+	width:114px;
+	background: #eeeeee;
+}
+.rule_title ul li:hover,.rule_title ul li.active{
+	background: #13c4a5;
+	color: #fff;
+}
+.rule_title_01 ul li:hover,.rule_title_01 ul li.active{
+	background: #13c4a5;
+	color: #fff;
+}
+.rule_title .image_text_title li{
+	width:90px;
+}
+.rule_title .menu_title li{
+	width:70px;
+}
+.export{
+	float:right;
+	width: 110px;
+	height: 30px;
+	margin-right:10px;
+	border-radius:3px;
+	margin-top: 5px;
+	cursor:pointer;
+}
+.icon_export{
+	float:left;
+	width:22px;
+	height:17px;
+	background:url(../images/export.png) no-repeat center center;
+	margin-left:13px;
+	margin-top:6px;
+}
+.export p{
+	float:left;
+	color:#333333;
+	line-height: 30px;
+	margin-left:5px;
+	font-size: 14px;
+}
+.export:hover,.export.active{
+	background-color: #13c4a5;
+}
+.export:hover .icon_export{
+	background:url(../images/export_white.png) no-repeat center center;
+}
+.export:hover .export p{
+	color:#FFF;
+}
+.attentionResp{
+	margin-left: -10px;
+}
+.attentionResp table{
+	width:100%;
+}
+.attentionResp table tr{
+	border-bottom: 1px solid #ddd;
+}
+.attentionResp table tr:last-child{
+	border:none;
+}
+.attentionResp table tr:nth-child(1){
+	background:#f2f2f2;
+}
+.attentionResp table td,.attentionResp table th{
+/* 	width:13%; */
+	max-height:30px;
+	padding: 10px 5px;
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+	border:none;
+	position: relative;
+	text-align:center;
+}
+/*图文消息的表格*/
+.attentionResp .image_text_table td:nth-child(2),.attentionResp .image_text_table th:nth-child(2){
+	width:30%;
+}
+.attentionResp .image_text_table td:nth-child(6),.attentionResp .image_text_table th:nth-child(6){
+	width:22%;
+}
+/*菜单点击的表格*/
+.attentionResp .menu_table td,.attentionResp .menu_table th{
+	width:10%;
+}
+.attentionResp .menu_table td:nth-child(1),.attentionResp .menu_table th:nth-child(1){
+	width:13%;
+}
+.attentionResp .menu_table td:nth-child(2),.attentionResp .menu_table th:nth-child(2){
+	width:27%;
+}
+/*卡券的表格*/
+
+.attentionResp .card_table td,.attentionResp .card_table th{
+	width:10%;
+}
+.attentionResp .card_table td:nth-child(1),.attentionResp .card_table th:nth-child(1){
+	width:16%;
+}
+.attentionResp .card_table td:nth-child(2),.attentionResp .card_table th:nth-child(2){
+	width:24%;
+}
+/*按钮点击的表格*/
+.attentionResp .buttonClick_table td,.attentionResp .buttonClick_table th{
+/* 	width:11%; */
+}
+
+/*粉丝关注表格*/
+/*粉丝地域TOP10*/
+.attentionResp .local_table td,.attentionResp .local_table th{
+	width:10%;
+}
+/*粉丝性别*/
+.attentionResp .sex_table td,.attentionResp .sex_tablee th{
+	width:50%;
+}
+/*粉丝情况*/
+.attentionResp .situation_attention td,.attentionResp .situation_attention th{
+/* 	width:25%; */
+}
+
+.attentionResp table tr:hover{
+	background:#f7f7f7;
+}
+.paging{
+	font-size:12px;
+	/*position:absolute;
+	bottom:40px;*/
+	height: 40px;
+	padding: 5px 10px;
+	margin: 0 auto;
+	line-height: 30px;
+	text-align: center;
+	margin-right: 20px;
+	margin-left: 50%;
+	transform:translate(-50%,0);
+	-ms-transform:translate(-50%,0);
+	-o-transform:translate(-50%,0);
+	-webkit-transform:translate(-50%,0);
+	-moz-transform:translate(-50%,0);
+	margin-top: 30px;
+}
+.paging a{
+	margin-right:10px;
+	font-size: 12px;
+	color: #666;
+}
+.padding_page{
+	height:20px;
+	border:1px solid #d9d9d9;
+	text-align:center;	
+}
+.paging button{
+	width: 35px;
+	height: 20px;
+	border-radius: 1px;
+	text-align: center;
+	line-height: 20px;
+	border:none;
+	background:#cccccc;
+	color:#fff;
+	font-size: 12px;
+	letter-spacing: 1px;
+	margin-left:10px;
+	cursor:pointer;
+}
+.paging button:hover{
+	background: #13c4a5;
+}
+
+/*粉丝关注*/
+#rule_attention{
+	width:50%
+}
+.rule_title ul .rule_title_attention{
+	width:80px;
+}
+.rule_title .local_attention .rule_title_attention{
+	width:120px;
+}
+.rule_title_attention{
+	height: 40px;
+}
+.rule_title_attention div{
+	float: left;
+	color:#595959;
+	line-height: 40px;
+	margin-left: 20px;
+	font-size: 14px;
+	font-weight:bold;
+	text-align: center;
+	border-radius:3px;
+	
+}
+.rule .attention_person{
+	float:left;
+	margin-top:5px;
+	height:80px;
+}
+.rule .attention_person ul{
+	float:left;
+	height:60px;
+	border-right:1px solid #e5e5e5;
+}
+.rule .attention_person ul:last-child{
+	border-right:none;
+}
+.rule .attention_person ul li:nth-child(1){
+	margin:10px 40px;
+	margin-right:20px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+	text-align:center;
+}
+.rule .attention_person ul li:nth-child(2){
+	font-size:20px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+	text-align:center;
+}
+
+/*粉丝关注-时间位置*/
+.time_content{
+	overflow:hidden;
+	margin:15px;
+	margin-left:20px;
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+	line-height:34px;
+	
+}
+.time_title,.time_menu,.time_content button{
+	color:#333333;
+	float:left;
+}
+.time_menu{
+	margin-left:20px;
+	border:1px solid #e5e5e5;
+}
+.time_menu li{
+	float:left;
+	padding:0 40px;
+	border-right:1px solid #e5e5e5;
+	letter-spacing: 1px;
+}
+.time_menu li:nth-child(4){
+	padding:0 15px;
+}
+.time_menu li a{
+	color:#595959;
+}
+.time_menu li a:hover{
+	color:#13c4a5;
+}
+.icon_time{
+	width:17px;
+	height:9px;
+	background:url(../images/icon.png) no-repeat right;
+	padding-right:30px;
+	cursor:pointer;
+}
+.time_content button{
+	width: 80px;
+	height: 30px;
+	margin-left:25px;
+	margin-top: 2px;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 30px;
+	border:none;
+	background: #13c4a5;
+	color:#fff;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+}
+/*粉丝关注-下拉框*/
+select * {  
+  margin: 0;  
+  padding: 0;  
+} 
+.time_menu .select_attention{
+	margin-right:-10px;
+	margin-left:-10px;
+	border:none;
+}
+.select_attention select{
+	height: 34px;
+	border:none;
+	color:#595959;
+}
+border:1px solid #ddd; 
+
+/*图文消息CSS*/
+.searchContainer{
+	width:calc(100% - 40px);
+	width:-webkit-calc(100% - 40px);
+	width:-moz-calc(100% - 40px);
+	width:-ms-calc(100% - 40px);
+	width:-o-calc(100% - 40px);
+	height: 70px;
+	margin-left: 20px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+}
+
+.search_box01 p,.input_content{
+	float:left;
+}
+.search_box01 p{
+	margin-top: 10px;
+	line-height:32px;
+	font-size: 12px;
+	color:#333333;
+}
+.input_content{
+	width:230px;
+	height: 32px;
+	background: #fff;
+	margin-top: 10px;
+	margin-right: 20px;
+	border-radius: 3px;
+	border:1px solid #ddd;
+}
+.search_box01{
+	float: left;
+	position:absolute;
+	left:40px;
+}
+.search_box02{
+	float: left;
+	position:absolute;
+	left:330px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.searchContainer button{
+	float: left;
+	position:absolute;
+	left:585px;
+}
+/*推送素材-下拉框*/
+.push_fodder{
+	width:228px;
+	height: 30px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+	border:1px solid #ddd;  
+}
+.push_fodder option{
+	border:none;
+	margin:10px;
+	font-size:12px;
+	line-height:20px;
+}
+/*
+.icon_search:hover .push{display:block;}
+.push{
+	position:absolute;
+	top:30px;
+	left:0;
+	width:100%;
+	height:80px;
+	background: #fff;
+	border:1px solid #ddd;
+	z-index:2;
+	
+}
+.push a{
+	display:block;
+	line-height:18px;
+	color:#666;
+	margin-left:5px;
+	margin-top:0px;
+	font-size:12px;
+}
+.search_box02 input{
+	float:left;
+	color:#333333;
+}
+.icon_search{
+	float:right;
+	width:17px;
+	height:9px;
+	background:url(../images/icon.png) no-repeat center center;
+	margin-right:10px;
+	margin-top:10px;
+	cursor:pointer;
+}
+*/
+.input_content input,.search_box02 input{
+	width:180px;
+	line-height:30px;
+	margin-left:5px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+	color:#999;
+}
+
+.searchContainer button{
+	width: 80px;
+	height: 30px;
+	margin-top: 10px;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 30px;
+	border:none;
+	background: #13c4a5;
+	color:#fff;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+}
+
+/*卡券CSS*/
+#export_card{
+	margin-right:20px;
+	margin-bottom:10px;
+}
+/*搜索、确定，样式*/
+.searchCnt{
+/* 	height: 0px; */
+	margin-bottom: 10px;
+}
+.searchCnt input{
+	width: 180px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+}
+.searchCnt button{
+	font-size: 14px;
+	font-family:Arial, Helvetica, sans-serif '微软雅黑';
+}

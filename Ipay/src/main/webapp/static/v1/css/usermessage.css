@@ -1,0 +1,113 @@
+.msgbox {
+	width: 98%;
+	margin-top: 100px;
+	padding: 0px 10px 130px 10px;
+	overflow: visible;
+	position: relative;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.user {
+	width: 64px;
+	height: 64px;
+	padding: 2px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+.user img {
+	width: 58px;
+	height: 58px;
+}
+
+.tagleft {
+	height: auto;
+	font-size: 12px;
+	line-height: 24px;
+	padding: 5px;
+	background: #eeeeee;
+	border-radius: 6px;
+	border: 1px solid #eeeeee;
+	max-width: 70%;
+}
+.tagleft img,.tagright img{
+    display:block;
+    height: auto;
+    width:200px;
+}
+.tagright {
+	height: auto;
+	font-size: 12px;
+	color:#fff;
+	line-height: 24px;
+	padding: 5px;
+	background: #13c4a5;
+	border-radius: 6px;
+	border: 1px solid #13c4a5;
+	max-width: 70%;
+}
+
+.arrowleft {
+	width: 24px;
+	height: 24px;
+	background: url(../images/arrow_left.png);
+	padding-top: 8px;
+}
+
+.arrowright {
+	width: 24px;
+	height: 24px;
+	background: url(../images/arrow_right.png) no-repeat;
+	padding-top: 8px;
+}
+.usermsg {
+	width: 100%;
+	float: left;
+	display: block;
+	margin: 5px 0;
+	/*background:#CC9;	*/
+}
+.usermsg li {
+	width: 100%;
+}
+
+.cstmsg {
+	width: 100%;
+	float: right;
+	display: block;
+	margin: 5px 0;
+}
+
+.datetime {
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	height: 18px;
+	line-height: 12px;
+	padding-top: 3px;
+}
+
+.unread {
+    width: 28px;
+    height: 28px;
+    line-height:28px;
+    background: #f70914;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: absolute;
+    top:-5px;
+    left:-15px;
+    text-align: center;
+    z-index: 10;
+    color: #fff;
+    font-size: 11px;   
+    font-weight:bold;
+}

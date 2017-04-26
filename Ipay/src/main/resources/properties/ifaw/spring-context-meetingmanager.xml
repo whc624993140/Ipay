@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/task  
+	   http://www.springframework.org/schema/task/spring-task-4.0.xsd  
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+       http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd"
+	default-lazy-init="false">
+
+
+	<bean id="one"
+		class="com.aicyber.c4.ifaw.moudels.meetingmanager.invitationh5template.InvitationH5Template">
+		<property name="inviteTemplatePath" value="maserati/template/test/invite"></property>
+		<property name="unInviteTemplatePath" value="maserati/template/test/uninvite"></property>
+		<property name="name" value="测试1"></property>
+		<property name="id" value="1"></property>
+	</bean>
+
+
+
+	<bean id="templates" class="java.util.ArrayList">
+		<constructor-arg index="0">
+			<list>
+<!-- 				<ref bean="one"></ref> -->
+			</list>
+		</constructor-arg>
+	</bean>
+	
+<!-- 	<bean id="t1" -->
+<!-- 		class="com.aicyber.c4.ifaw.moudels.meetingmanager.template.instances.T1"> -->
+<!-- 		<property name="templateid" value="FDrfOtpHO4iXzkMWiTb0DLyAvukwB4nbuQDfZrJBgJg"></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="t2" -->
+<!-- 		class="com.aicyber.c4.ifaw.moudels.meetingmanager.template.instances.T2"> -->
+<!-- 		<property name="templateid" value="tCb6IgojphTcMXol8o2IFESfCldnTFFdyZ3Yjfn7SHY"></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="t3" -->
+<!-- 		class="com.aicyber.c4.ifaw.moudels.meetingmanager.template.instances.T3"> -->
+<!-- 		<property name="templateid" value="YyrnQ4NGzjEYxSOPyGJtc77iki7DynOKtzmiQ63pFAg"></property> -->
+<!-- 	</bean> -->
+	
+	
+	
+	
+
+
+</beans>

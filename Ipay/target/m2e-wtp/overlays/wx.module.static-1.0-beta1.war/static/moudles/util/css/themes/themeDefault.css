@@ -1,0 +1,259 @@
+html,body{
+	color: #656565;
+	font-size: 12px;
+}
+.head{
+	background: #fff;
+}
+.navbar{
+	background: #13C4A5;
+}
+.navbar ul li{
+	color: #8e9eae;
+	border-left: 2px solid #13C4A5;
+}
+.navbar ul li ul{
+	background: #fff;
+}
+.navbar ul li ul li{
+	color: #656565;
+}
+.navbar ul li ul li:hover{
+	background: #13C4A5;
+	color:#fff;
+}
+.badge{
+	background: #B1B5B9;
+	color: #fff;
+}
+.mainBody{
+	background: #ffffff;
+	margin: 0px;
+	padding: 0px;
+}
+.nowdate{
+	background:#13C4A5;
+}
+.nowtime{
+	color: #13C4A5;
+}
+.dataNum:hover{
+	background: rgba(035,052,069,.1);
+}
+.dataimg1{
+	background: #fa8564;
+}
+.dataimg1:hover{
+	background: #fa9a7f;
+}
+.dataimg2{
+	background: #aec785;
+}
+.dataimg2:hover{
+	background: #c4de9a;
+}
+.dataimg3{
+	background: #c785b5;
+}
+.dataimg3:hover{
+	background: #dd9fcc;
+}
+.dataimg4{
+	background: #5faee3;
+}
+.dataimg4:hover{
+	background: #7bc2f1;
+}
+.dataimg5{
+	background: #1fbba6;
+}
+.dataimg5:hover{
+	background: #36dac4;
+}
+.dataimg6{
+	background: #fdc005;
+}
+.dataimg6:hover{
+	background: #ffd450;
+}
+.loginInfo ul li:hover{
+	background: #13C4A5;
+}
+.mma-title,.action-title{
+	background: #13C4A5;
+}
+.mm-icon,.ul-mm > li .li-edit{
+	/*background: #233445;*/
+	background: none;
+}
+.action-title{
+	background: #13C4A5;
+}
+.imgWinClose{
+	background: #233445;
+}
+
+.btn_save{
+	background: #13C4A5;
+}
+
+.action-t{
+	background: #13C4A5;
+}
+.action-t:hover{
+	background: #36dac4;
+}
+.action-i{
+	background: #5292d2;
+}
+.action-i:hover{
+	background: #7bc2f1;
+}
+.action-l{
+	background: #f4c414;
+}
+.action-l:hover{
+	background: #ffd450;
+}
+.action-c{
+	background: #ff5f5f;
+}
+.action-c:hover{
+	background: #ff7070;
+}
+@media screen and (max-width: 1200px){
+.action_sava{
+		background: #13C4A5;
+	}
+	.action_sava:hover{
+		background: #36dac4;
+	}
+	.action_release{
+		background: #13C4A5;
+	}
+	.action_release:hover{
+		background: #df0005;
+	}
+	.action_preview:hover{
+		background: #df0005;
+	}
+	.action_push:hover{
+		background:#F03;
+	}
+}
+@media screen and (min-width: 1200px){
+	.action_sava{
+		background: #13C4A5;
+	}
+	.action_sava:hover{
+		background: #36dac4;
+	}
+	.action_release{
+		background: #13C4A5;
+	}
+	.action_release:hover{
+		background: #df0005;
+	}
+	.action_preview:hover{
+		background:#df0005;
+
+	}
+	.action_push:hover{
+		background:#F03;
+	}
+}
+.actDispYes{
+	background: #13C4A5;
+}
+.actDispYes:hover{
+	background: #31d3bd;
+}
+.actDispNo:hover{
+	background: #233445;
+}
+.customerGroup_cnt ul li{
+	background: #13C4A5;
+}
+.customerGroup_cnt ul li:hover{
+	background: #31d3bd;
+}
+.gr{
+	background: #13C4A5;
+}
+.gr:hover{
+	background: #13C4A5;
+}
+
+.se{
+	background:  #13C4A5;
+
+}
+.se:hover{
+	background:  #13C4A5;
+}
+.RleBt{
+	background: #13C4A5;
+}
+.RleBt:hover{
+	background:#df0005;
+}
+.prevBt:hover{
+	background: #233445;
+	border:1px solid #233445;
+}
+.alertArea_tip{
+	background: #13C4A5;
+}
+.sure{
+	background: #13C4A5;
+}
+.sure:hover{
+	background: #13C4A5;
+}
+.cancel:hover{
+	background: #233445;
+	border: 1px solid #233445;
+}
+.gr{
+	box-shadow: 0px 3px 0px #13C4A5;
+	-webkit-box-shadow:  0px 3px 0px  #13C4A5;
+	-moz-box-shadow:  0px 3px 0px  #13C4A5;
+	-o-box-shadow: 0px 3px 0px  #13C4A5;
+	-ms-box-shadow:  0px 3px 0px #13C4A5;
+}
+
+.se{
+	box-shadow: 0px 3px 0px #13C4A5;
+	-webkit-box-shadow:  0px 3px 0px  #13C4A5;
+	-moz-box-shadow:  0px 3px 0px  #13C4A5;
+	-o-box-shadow: 0px 3px 0px  #13C4A5;
+	-ms-box-shadow:  0px 3px 0px  #13C4A5;
+
+}
+.perSet:hover,.sysSet:hover{
+	color: #13C4A5;
+}
+.actDtic{
+	color: #233445;
+}
+.userInfoAdd{
+	background:#13C4A5;
+	color: #fff;
+}
+.navbarHover1{
+	color: #fff;
+}
+.navbarHover2{
+	color: #8E9EAE;
+}
+.navbarLiAdd{
+	border-left:2px solid #13C4A5 !important;
+	color:#fff !important;
+}
+.navbarLiOtherAdd{
+	border-left:2px solid #13C4A5; !important;
+	color:#8E9EAE !important;
+}
+.messgeRelease_t_liAdd{
+	color: #13C4A5 !important;
+}

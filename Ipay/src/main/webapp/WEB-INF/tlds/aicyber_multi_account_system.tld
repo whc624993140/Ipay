@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+    
+  <description>aicyber_multi_account_system</description>
+  <display-name>aicyber_multi_account_system</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>amf</short-name>
+
+  <function>
+    <description>获取当前是否包含权限</description>
+    <name>isHaveRole</name>
+    <function-class>com.aicyber.shiro.utils.AuthUtils</function-class>
+    <function-signature>java.lang.Boolean isHaveRole(java.lang.String)</function-signature>
+    <example>${amf:isHaveRole('cc')}</example>  
+  </function>
+  
+  
+</taglib>
